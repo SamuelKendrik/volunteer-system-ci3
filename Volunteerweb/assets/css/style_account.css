@@ -1,0 +1,444 @@
+@import url('https://fonts.googleapis.com/css2?family=Manjari:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Manjari", sans-serif;
+}
+
+body {
+    background: #f4f6f8;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0 4px rgba(0,0,0,0.2);
+    padding: 0 20px;
+}
+
+.logo {
+    height: 80px;
+    width: auto;
+    display: block;
+}
+
+.navlink {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navlink li {
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+.navlink li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    display: block;
+}
+
+.paged {
+    padding: 8px 15px;
+    background: #d2ffe3;
+    border-radius: 30px;
+    color: black;
+    font-weight: bold;
+}
+
+.unpaged {
+    padding: 8px 15px;
+}
+
+.unpaged a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.unpaged:hover {
+    background: #d3ffd285;
+    border-radius: 30px;
+}
+
+.menu-button {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* ================= ACCOUNT LAYOUT ================= */
+.account-container {
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    padding: 40px 20px;
+    background: #f4f6f8;
+}
+
+.account-card-wrapper {
+    width: 100%;
+    max-width: 1400px;
+}
+
+.account-header {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    margin-bottom: 20px;
+}
+
+.account-header h1 {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.account-header p {
+    color: #aaa;
+    font-size: 14px;
+}
+
+.account-layout {
+    display: flex;
+    gap: 30px;
+    align-items: stretch; /* ✅ Dynamic equal heights across sibling columns */
+    flex-wrap: wrap;
+}
+
+.account-card {
+    flex: 1;
+    min-width: 350px;
+    background: rgba(255, 255, 255, 0.98);
+    color: #111;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    backdrop-filter: blur(6px);
+}
+
+.event-history-box {
+    flex: 1;
+    min-width: 350px;
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* ================= PROFILE CARD ELEMENTS ================= */
+.profile-avatar-section {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 5px solid #d2ffe3;
+}
+
+.profile-avatar-section h2 {
+    font-size: 24px;
+    color: #111;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.row span {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #333;
+}
+
+.row p {
+    color: #555;
+}
+
+/* ================= ACTION BUTTONS ================= */
+.account-actions {
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+}
+
+.btn-edit-event,
+.btn-edit-profile,
+.btn-logout {
+    flex: 1;
+    padding: 12px 22px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.btn-edit-profile {
+    background: #17a948;
+    color: white;
+}
+
+.btn-edit-profile:hover {
+    background: #128236;
+}
+
+.btn-edit-event {
+    background: #0d6efd;
+    color: white;
+}
+
+.btn-edit-event:hover {
+    background: #0b5ed7;
+}
+
+.btn-logout {
+    background: #dc3545;
+    color: white;
+}
+
+.btn-logout:hover {
+    background: #b02a37;
+}
+
+/* ================= EVENT BOX ELEMENTS ================= */
+.event-history-header h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+    color: #111;
+}
+
+.event-history-header p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.event-item {
+    border: 1px solid #e5e5e5;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.event-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.event-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.event-top h3 {
+    font-size: 18px;
+    color: #111;
+}
+
+.status {
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+}
+
+.accepted { background-color: #17a948; }
+.pending { background-color: #f0ad4e; }
+.rejected { background-color: #dc3545; }
+
+.event-info p {
+    margin-bottom: 10px;
+    color: #555;
+    font-size: 14px;
+}
+
+.event-info i {
+    width: 20px;
+    color: #17a948;
+}
+
+/* ================= MODAL ================= */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.modal.show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.modal-content {
+    background: white;
+    width: 400px;
+    padding: 25px;
+    border-radius: 12px;
+    position: relative;
+    transform: scale(0.85);
+    transition: transform 0.25s ease;
+}
+
+.modal.show .modal-content {
+    transform: scale(1);
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.modal-content button {
+    width: 100%;
+    padding: 10px;
+    background: #17a948;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* ================= FOOTER ================= */
+.main-footer {
+    background-color: #0b0b0b;
+    color: white;
+    padding: 50px 40px 20px 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 30px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.footer-col p {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.app-buttons img {
+    height: 40px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.footer-col ul li:hover { color: white; }
+.footer-col ul li i { margin-left: 5px; color: #17a948; }
+
+.footer-bottom {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    margin-top: 20px;
+    color: #777;
+    font-size: 12px;
+}
+
+/* ================= RESPONSIVE MEDIA QUERIES ================= */
+@media screen and (max-width: 900px) {
+    .account-layout {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .account-card, .event-history-box {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .menu-button {
+        display: block;
+        cursor: pointer;
+    }
+    .navlink {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: white;
+        margin-top: -1200px;
+        transition: all 0.5s ease;
+    }
+    .mobile-menu {
+        margin-top: 0;
+    }
+    .navlink li {
+        margin: 30px auto;
+    }
+}

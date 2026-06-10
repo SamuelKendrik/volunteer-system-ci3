@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  api:
+    build:
+      context: .
+    container_name: api
+    ports:
+      - "8989:80"
+    volumes:
+      - .:/var/www/html
+    networks:
+      - default
+      - mysql_default  # gunakan ini untuk connect ke DB lama
+
+networks:
+  default:
+  mysql_default:
+    external: true

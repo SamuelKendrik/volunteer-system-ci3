@@ -1,0 +1,485 @@
+@import url('https://fonts.googleapis.com/css2?family=Manjari:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Manjari", sans-serif;
+    background-color: #0b0b0b;
+}
+
+.navbar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0 4px rgba(0,0,0,0.2);
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.navbar a {
+    all: unset;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.navlink {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navlink li {
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+.logo {
+    height: 80px;
+    width: auto;
+    display: block;
+}
+
+.paged {
+    padding: 8px 15px;
+    background: #d2ffe3;
+    border-radius: 30px;
+    color: black;
+    font-weight: bold;
+}
+
+.unpaged {
+    padding: 8px 15px;
+    color: black;
+}
+
+.unpaged:hover {
+    background: #d3ffd285;
+    border-radius: 30px;
+}
+
+.menu-button {
+    display: none;
+}
+
+.hero-section {
+    margin-top: 80px;
+    height: 85vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    padding-left: 8%;
+    transition: background-image 1s ease-in-out;
+}
+
+.hero-card {
+    background-color: rgba(255,255,255,0.95);
+    padding: 40px;
+    border-radius: 18px;
+    width: 420px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.hero-card h1 {
+    font-size: 38px;
+    margin-bottom: 20px;
+    color: #111;
+}
+
+.hero-card p {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.btn-green {
+    display: inline-block;
+    background-color: #17a948;
+    color: white;
+    padding: 13px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-green:hover {
+    background-color: #128236;
+}
+
+.green-bg-section {
+    background: linear-gradient(to bottom, #a4e698, #8ee07f);
+    padding: 70px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 50px;
+    color: #111;
+}
+
+.places-section {
+    margin-bottom: 70px;
+}
+
+.places-grid {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.place-card {
+    background-color: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.place-card:hover {
+    transform: translateY(-5px);
+}
+
+.place-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.place-card h3 {
+    padding: 15px 15px 5px;
+    font-size: 18px;
+}
+
+.place-card .stars {
+    padding: 0 15px;
+    color: #17a948;
+}
+
+.place-card p {
+    padding: 10px 15px 20px;
+    color: #666;
+}
+
+.about-section {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding: 90px 80px;
+    background-color: white;
+}
+
+.about-img-container {
+    flex: 1;
+}
+
+.about-img-container img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.about-text-container {
+    flex: 1;
+}
+
+.about-text-container h2 {
+    font-size: 40px;
+    color: #17a948;
+    margin-bottom: 20px;
+}
+
+.about-text-container p {
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.reviews-grid {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.review-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.quote-icon {
+    font-size: 28px;
+    color: #17a948;
+    margin-bottom: 20px;
+}
+
+.review-card p {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.review-card .stars {
+    color: #17a948;
+    margin-bottom: 20px;
+}
+
+.reviewer img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.reviewer h4 {
+    font-size: 16px;
+}
+
+.main-footer {
+    background-color: #0b0b0b;
+    color: white;
+    padding: 50px 40px 20px 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 30px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.footer-col p {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.app-buttons img {
+    height: 40px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.footer-col ul li:hover {
+    color: white;
+}
+
+.footer-col ul li i {
+    margin-left: 5px;
+    color: #17a948;
+}
+
+.footer-bottom {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    margin-top: 20px;
+    color: #777;
+    font-size: 12px;
+}
+
+@media screen and (max-width: 900px) {
+
+    .places-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .reviews-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .menu-button {
+        display: block;
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    .navlink {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: white;
+        margin-top: -1200px;
+        transition: all 0.5s ease;
+    }
+
+    .mobile-menu {
+        margin-top: 0;
+    }
+
+    .navlink li {
+        margin: 30px auto;
+    }
+
+    .hero-card {
+        width: 90%;
+        padding: 25px;
+    }
+
+    .hero-card h1 {
+        font-size: 30px;
+    }
+
+    .places-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-section {
+        padding: 60px 30px;
+    }
+}
+
+/* ================= REVIEWS SECTION FIXED ================= */
+.reviews-section {
+    padding: 70px 20px;
+    background: #8ee07f;
+}
+
+.reviews-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* viewport hides overflow */
+.reviews-viewport {
+    width: 1070px; /* 3 cards */
+    overflow: hidden;
+}
+
+/* track moves left/right */
+.reviews-track {
+    display: flex;
+    gap: 25px;
+    transition: transform 0.5s ease;
+}
+
+/* BIG CARD */
+.review-card {
+    width: 340px;
+    height: 340px;
+    background: white;
+    border-radius: 20px;
+    padding: 22px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* top */
+.review-top {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.review-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+/* text */
+.review-name {
+    font-weight: bold;
+}
+
+.review-comment {
+    font-size: 14px;
+    color: #333;
+    flex-grow: 1;
+    margin-top: 15px;
+}
+
+.review-stars {
+    color: #17a948;
+    font-size: 18px;
+}
+
+/* buttons */
+.review-btn {
+    background: white;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    margin: 0 10px;
+}
+
+.review-btn:hover {
+    background: #eee;
+}
+
+/* responsive */
+@media (max-width: 1100px) {
+    .reviews-viewport {
+        width: 700px; /* 2 cards */
+    }
+}
+
+@media (max-width: 700px) {
+    .reviews-viewport {
+        width: 340px; /* 1 card */
+    }
+}

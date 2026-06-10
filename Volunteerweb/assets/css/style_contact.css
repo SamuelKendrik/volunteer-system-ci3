@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Manjari:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Manjari", sans-serif;
+    background-color: #0b0b0b;
+}
+
+/* ================= NAVBAR (FIXED - SAME AS PLACE PAGE) ================= */
+
+.navbar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0 4px rgba(0,0,0,0.2);
+    padding: 0 20px;
+}
+
+.navbar a {
+    all: unset;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.logo {
+    height: 80px;
+    width: auto;
+    display: block;
+}
+
+.navlink {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navlink li {
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+.paged {
+    padding: 8px 15px;
+    background: #d2ffe3;
+    border-radius: 30px;
+    color: black;
+    font-weight: bold;
+}
+
+.unpaged {
+    padding: 8px 15px;
+    color: black;
+}
+
+.unpaged:hover {
+    background: #d3ffd285;
+    border-radius: 30px;
+}
+
+.menu-button {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* ================= CONTACT SECTION ================= */
+
+.contact {
+    background-color: white;
+    padding: 80px 60px;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-info h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #111;
+}
+
+.contact-info p {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.info-item {
+    margin-top: 20px;
+}
+
+.contact-form {
+    flex: 1;
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #17a948;
+}
+
+.contact-form button {
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background-color: #17a948;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #128236;
+}
+
+/* ================= FOOTER ================= */
+
+.main-footer {
+    background-color: #0b0b0b;
+    color: white;
+    padding: 50px 40px 20px 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 30px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.footer-col p {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.app-buttons img {
+    height: 40px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.footer-col ul li:hover {
+    color: white;
+}
+
+.footer-col ul li i {
+    margin-left: 5px;
+    color: #17a948;
+}
+
+.footer-bottom {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    margin-top: 20px;
+    color: #777;
+    font-size: 12px;
+}
+
+/* ================= RESPONSIVE (MATCH PLACE PAGE) ================= */
+
+@media screen and (max-width: 900px) {
+    .contact-container {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .menu-button {
+        display: block;
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    .navlink {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: white;
+        margin-top: -1200px;
+        transition: all 0.5s ease;
+    }
+
+    .mobile-menu {
+        margin-top: 0;
+    }
+
+    .navlink li {
+        margin: 30px auto;
+    }
+
+    .contact {
+        padding: 50px 20px;
+    }
+}
+
+.map-section {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    background: #fff;
+}
+
+.map-container {
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 400px;
+    border: 0;
+    display: block;
+}
